@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Priscila Mendri | Seu cantinho dos achadinhos</title>
+<meta name="description" content="Achadinhos, promoções e ofertas selecionadas por Priscila Mendri. Eu encontro, você aproveita!">
+<link rel="icon" href="imgs/logo-priscila-mendri.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500;1,9..144,600&family=Dancing+Script:wght@600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="imgs/favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<header class="navbar" id="navbar">
+  <div class="container nav-inner">
+    <a href="#home" class="nav-brand">
+      <img src="imgs/logo-priscila-mendri.png" alt="Priscila Mendri">
+      <span class="nav-brand-text">Priscila Mendri</span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#home">Início</a>
+      <a href="#achadinhos">Achadinhos</a>
+      <a href="#ofertas">Ofertas</a>
+      <a href="#cupons">Cupons</a>
+      <a href="#categorias">Categorias</a>
+      <a href="#instagram">Instagram</a>
+      <a href="#grupo">Grupo VIP</a>
+    </nav>
+    <div class="nav-actions">
+      <a href="#grupo" class="btn btn-primary btn-sm">Entrar no grupo</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menu"><span></span></button>
+    </div>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero" id="home">
+  <div class="container hero-inner">
+    <div>
+      <span class="hero-badge"><span class="dot"></span> Curadoria diária de ofertas</span>
+      <h1>Achadinhos que<br>você vai <em>amar</em> 💕</h1>
+      <p class="lead">Eu encontro produtos incríveis, promoções e preços especiais para você aproveitar — direto da Shopee, Amazon, Mercado Livre e muito mais.</p>
+      <div class="hero-ctas">
+        <a href="#achadinhos" class="btn btn-primary">Ver achadinhos</a>
+        <a href="#grupo" class="btn btn-outline">Entrar no grupo de promoções</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat"><b id="statProdutos">0</b><span>achadinhos selecionados</span></div>
+        <div class="hero-stat"><b>4</b><span>marketplaces parceiros</span></div>
+        <div class="hero-stat"><b>Toda semana</b><span>novas promoções</span></div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-visual-frame">
+        <img src="imgs/logo-priscila-mendri.png" alt="Priscila Mendri, curadora de achadinhos">
+      </div>
+      <div class="hero-chip c1">🛍️ Novo achadinho</div>
+      <div class="hero-chip c2">🔥 -30% hoje</div>
+      <div class="hero-chip c3">💬 Grupo ativo</div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CATEGORIAS ================= -->
+<section class="section section-tight" id="categorias">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">navegue por</span>
+      <h2 class="section-title">Categorias</h2>
+    </div>
+    <div class="cat-scroller" id="catScroller"></div>
+  </div>
+</section>
+
+<!-- ================= PRODUTOS EM DESTAQUE ================= -->
+<section class="section" id="achadinhos">
+  <div class="container">
+    <div class="section-head split reveal">
+      <div>
+        <span class="eyebrow">selecionados a dedo</span>
+        <h2 class="section-title">Achadinhos em destaque ✨</h2>
+        <p class="section-sub">Produtos que eu mesma separei, com preço bom e qualidade que vale a pena.</p>
+      </div>
+      <button class="btn btn-outline btn-sm" id="clearFilter" style="display:none;">Limpar filtro ✕</button>
+    </div>
+    <div class="product-grid" id="featuredGrid"></div>
+  </div>
+</section>
+
+<!-- ================= OFERTAS ================= -->
+<section class="section section-offers" id="ofertas">
+  <div class="container">
+    <div class="section-head center reveal">
+      <span class="eyebrow">imperdível</span>
+      <h2 class="section-title">Ofertas que valem a pena 🛍️</h2>
+      <p class="section-sub">Promoções por tempo limitado nos marketplaces parceiros.</p>
+    </div>
+    <div class="offer-grid" id="offerGrid"></div>
+  </div>
+</section>
+
+<!-- ================= CUPONS ================= -->
+<section class="section" id="cupons">
+  <div class="container">
+    <div class="section-head center reveal">
+      <span class="eyebrow">economize mais</span>
+      <h2 class="section-title">Cupons & Promoções 🎟️</h2>
+      <p class="section-sub">Use os códigos abaixo na hora de finalizar sua compra no marketplace.</p>
+    </div>
+    <div class="coupon-grid" id="couponGrid"></div>
+  </div>
+</section>
+
+<!-- ================= INSTAGRAM ================= -->
+<section class="section section-insta" id="instagram">
+  <div class="container">
+    <div class="section-head center reveal">
+      <span class="eyebrow">@priscilamendri</span>
+      <h2 class="section-title">Você viu no Instagram? 👀💗</h2>
+      <p class="section-sub">Os achadinhos que já bombaram por lá.</p>
+    </div>
+    <div class="insta-grid" id="instaGrid"></div>
+    <div class="insta-cta-wrap">
+      <a href="https://www.instagram.com/tuduaki_/" target="_blank" rel="noopener" class="btn btn-primary">Ver mais achadinhos no Instagram</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= GRUPO WHATSAPP ================= -->
+<section class="section section-tight" id="grupo">
+  <div class="container">
+    <div class="wa-banner reveal">
+      <div>
+        <h3>Não perca nenhuma promoção 💕</h3>
+        <p>Entre para o nosso grupo de promoções e receba achadinhos, cupons e ofertas especiais diretamente no seu WhatsApp.</p>
+      </div>
+      <a href="https://chat.whatsapp.com/KoaBIZ3i0km480jW5j54FD?s=cl&p=i&ilr=2" target="_blank" rel="noopener" class="btn btn-whats">
+        <span>📲</span> Entrar no grupo de promoções
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= COMO FUNCIONA ================= -->
+<section class="section">
+  <div class="container">
+    <div class="section-head center reveal">
+      <span class="eyebrow">simples assim</span>
+      <h2 class="section-title">Como funciona</h2>
+    </div>
+    <div class="steps">
+      <div class="step reveal">
+        <span class="step-num">01</span>
+        <div class="step-icon">🔎</div>
+        <h3>Eu encontro</h3>
+        <p>Selecionamos produtos, ofertas e achadinhos interessantes todos os dias.</p>
+      </div>
+      <div class="step reveal">
+        <span class="step-num">02</span>
+        <div class="step-icon">💕</div>
+        <h3>Você escolhe</h3>
+        <p>Encontre o produto que combina com você entre os achadinhos.</p>
+      </div>
+      <div class="step reveal">
+        <span class="step-num">03</span>
+        <div class="step-icon">🛍️</div>
+        <h3>Você aproveita</h3>
+        <p>Clique no produto e finalize a compra direto no marketplace parceiro.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= MAIS CLICADOS ================= -->
+<section class="section" id="queridinhos">
+  <div class="container">
+    <div class="section-head center reveal">
+      <span class="eyebrow">favoritos de vocês</span>
+      <h2 class="section-title">Os queridinhos da Priscila 💕</h2>
+    </div>
+    <div class="product-grid" id="popularGrid"></div>
+  </div>
+</section>
+
+<!-- ================= CTA FINAL ================= -->
+<section class="section">
+  <div class="container">
+    <div class="final-cta reveal">
+      <h2>Seu próximo achadinho<br>pode estar aqui. 💕</h2>
+      <p>Produtos incríveis, promoções e oportunidades selecionadas para você.</p>
+      <div class="ctas">
+        <a href="#achadinhos" class="btn btn-primary">Ver todos os achadinhos</a>
+        <a href="#grupo" class="btn btn-outline">Entrar no grupo VIP</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand">Priscila Mendri</div>
+        <div class="footer-tag">"Eu encontro, você aproveita! 🛍️"</div>
+      </div>
+      <div class="footer-cols">
+        <div class="footer-col">
+          <h4>Navegue</h4>
+          <a href="#home">Início</a>
+          <a href="#achadinhos">Achadinhos</a>
+          <a href="#ofertas">Ofertas</a>
+          <a href="#cupons">Cupons</a>
+        </div>
+        <div class="footer-col">
+          <h4>Conecte-se</h4>
+          <a href="#categorias">Categorias</a>
+          <a href="https://www.instagram.com/tuduaki_/" target="_blank" rel="noopener">Instagram</a>
+          <a href="#grupo">Grupo de Promoções</a>
+        </div>
+      </div>
+    </div>
+    <p class="footer-note">Os produtos são vendidos diretamente pelas plataformas parceiras. Os links disponibilizados podem ser links de afiliados, e a Priscila Mendri pode receber uma comissão por compras realizadas através deles, sem custo adicional para você.</p>
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> Priscila Mendri. Todos os direitos reservados.</span>
+      <span>Feito com 💕 para quem ama um bom achadinho.</span>
+    </div>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://chat.whatsapp.com/KoaBIZ3i0km480jW5j54FD?s=cl&p=i&ilr=2" target="_blank" rel="noopener" aria-label="Entrar no grupo de WhatsApp">💬</a>
+
+<script src="script.js" defer></script>
+</body>
+</html>
